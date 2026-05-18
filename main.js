@@ -92,6 +92,9 @@ const T = {
     "footer-col3-3": "Disclosure ANVISA",
     "footer-copy": "© 2026 PillGo Inc. Todos os direitos reservados.",
     "footer-made": "Feito com carinho ❤️ para cada família.",
+    "feat-badge1": "Acessível",
+    "feat-badge2": "Intuitivo",
+    "feat-badge3": "Cuidadoso",
   },
   en: {
     "nav-how": "How It Works",
@@ -185,6 +188,9 @@ const T = {
     "footer-col3-3": "FDA Disclosure",
     "footer-copy": "© 2026 PillGo Inc. All rights reserved.",
     "footer-made": "Made with care ❤️ for every family.",
+    "feat-badge1": "Accessible",
+    "feat-badge2": "Intuitive",
+    "feat-badge3": "Supportive",
   }
 };
 
@@ -201,6 +207,12 @@ function applyLang(lang) {
     if (!t[key]) return;
     if (el.tagName === 'INPUT') {
       el.placeholder = t[key];
+    } else if (el.classList.contains('cta-badge')) {
+      // Keep the dot span, only update the text node
+      const dot = el.querySelector('.badge-dot');
+      el.innerHTML = '';
+      if (dot) el.appendChild(dot);
+      el.appendChild(document.createTextNode(' ' + t[key]));
     } else {
       el.innerHTML = t[key].replace(/\n/g, '<br>');
     }
