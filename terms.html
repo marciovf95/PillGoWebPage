@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PillGo — Termos de Uso do Serviço e Dispenser Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                500: '#6366f1',
+                600: '#4f46e5',
+              },
+              teal: {
+                400: '#2dd4bf',
+                500: '#14b8a6',
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-slate-950 text-slate-200 antialiased min-h-screen selection:bg-indigo-500 selection:text-white"
+  >
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div
+            class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-teal-400 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition"
+          >
+            P
+          </div>
+          <span class="font-bold text-xl tracking-tight text-white"
+            >Pill<span class="text-teal-400">Go</span></span
+          >
+          <span
+            class="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700"
+            >Termos de Uso</span
+          >
+        </a>
+        <nav class="flex items-center gap-4 text-sm font-medium">
+          <a href="index.html" class="text-slate-400 hover:text-white transition flex items-center gap-1">
+            <span>&larr;</span> <span>Início</span>
+          </a>
+          <a href="privacy.html" class="text-slate-400 hover:text-white transition"
+            >Privacidade (LGPD)</a
+          >
+          <a
+            href="mailto:suporte@pillgo.com.br"
+            class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition"
+          >
+            Suporte
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Hero / Title -->
+      <div class="mb-10 text-center sm:text-left">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold mb-4"
+        >
+          <span>Contrato de Adesão e Condições Gerais</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Termos de Uso do Serviço PillGo
+        </h1>
+        <p class="mt-3 text-slate-400 text-sm sm:text-base leading-relaxed">
+          Última atualização: 31 de outubro de 2026 • Versão 2.1
+        </p>
+      </div>
+
+      <!-- AVISO MÉDICO EXPRESSO (DISCLAIMER OBRIGATÓRIO) -->
+      <div
+        class="mb-10 p-6 rounded-2xl bg-amber-500/10 border-2 border-amber-500/40 text-amber-200 space-y-3"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg"
+          >
+            ⚠️
+          </div>
+          <h2 class="text-lg font-bold text-amber-300 uppercase tracking-wide">
+            Aviso Importante: Não-Substituição de Orientação Médica
+          </h2>
+        </div>
+        <p class="text-sm leading-relaxed text-amber-100">
+          O sistema <strong>PillGo</strong> (composto pelo hardware dispenser físico, Gatekeeper em
+          nuvem e aplicativo móvel) é uma ferramenta tecnológica exclusivamente assistiva destinada
+          à <strong>organização mecânica e disparo de lembretes auxiliares</strong> para horários de
+          tomada de remédios.
+        </p>
+        <p class="text-sm leading-relaxed text-amber-100/90 font-medium">
+          <strong
+            >O PillGo NÃO é um dispositivo médico hospitalar, NÃO diagnostica, NÃO prescreve
+            dosagens e NÃO substitui o julgamento clínico, consultas médicas, orientação
+            farmacêutica ou supervisão de cuidadores profissionais.</strong
+          >
+        </p>
+        <p class="text-xs text-amber-200/80">
+          O abastecimento correto dos compartimentos físicos, a conferência das bulas, datas de
+          validade e a integridade da medicação administrada permanecem sob total responsabilidade
+          do paciente, de seu médico assistente ou de seus responsáveis legais.
+        </p>
+      </div>
+
+      <div class="space-y-10 text-slate-300 text-sm sm:text-base leading-relaxed">
+        <!-- Seção 1 -->
+        <section class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-indigo-400">1.</span> Objeto do Serviço
+          </h2>
+          <p>
+            Os presentes Termos regulam o acesso e a utilização dos serviços prestados pela
+            <strong>PillGo Tecnologia Ltda.</strong>, compreendendo:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400 text-sm">
+            <li>
+              Sincronização em tempo real de horários e alarmes de tampas com o hardware dispenser;
+            </li>
+            <li>
+              Sinalização luminosa por LEDs endereçados e alarmes sonoros acionados pelo firmware;
+            </li>
+            <li>
+              Registro histórico de telemetria de aberturas de tampas e monitoramento de adesão
+              farmacoterapêutica;
+            </li>
+            <li>
+              Portal administrativo e API de integração com provedores de nuvem (Supabase e Oracle
+              Cloud).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Seção 2 -->
+        <section class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-indigo-400">2.</span> Cadastro, Conta e Segurança das Credenciais
+          </h2>
+          <p>
+            Para usufruir do serviço, o usuário deve criar uma conta individual e parear seu
+            equipamento utilizando o portal de configuração local do microcontrolador (rede
+            <em>PillGo_Setup</em>) com o token numérico temporário de 6 dígitos gerado no
+            aplicativo.
+          </p>
+          <p class="text-slate-400 text-sm">
+            O usuário é o único responsável pela guarda e sigilo de suas credenciais de login,
+            senhas de redes Wi-Fi locais e chaves de acesso. Qualquer atividade realizada através de
+            sua conta autenticada será presumida como legítima até formal comunicação em contrário.
+          </p>
+        </section>
+
+        <!-- Seção 3 -->
+        <section class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-teal-400">3.</span> Planos de Assinatura e Limites de Dispositivos
+          </h2>
+          <p>
+            O PillGo disponibiliza planos de serviço com diferentes capacidades operacionais,
+            respeitando os seguintes limites técnicos estritos de dispensers ativos simultâneos por
+            conta:
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-3 text-center">
+            <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-xs uppercase font-bold text-amber-400 block mb-1">Bronze</span>
+              <span class="text-xl font-extrabold text-white">1 Dispenser</span>
+              <span class="text-xs text-slate-400 block mt-1">Uso Pessoal Base</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-xs uppercase font-bold text-slate-300 block mb-1">Silver</span>
+              <span class="text-xl font-extrabold text-white">3 Dispensers</span>
+              <span class="text-xs text-slate-400 block mt-1">Família / Cuidadores</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-xs uppercase font-bold text-yellow-400 block mb-1">Gold</span>
+              <span class="text-xl font-extrabold text-white">20 Dispensers</span>
+              <span class="text-xs text-slate-400 block mt-1">Residenciais / Clínicas</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-xs uppercase font-bold text-indigo-400 block mb-1">Master</span>
+              <span class="text-xl font-extrabold text-white">40 Dispensers</span>
+              <span class="text-xs text-slate-400 block mt-1">Instituições de Saúde</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400">
+            A tentativa de pareamento de dispositivos adicionais acima do teto do plano contratado
+            será recusada pelo Gatekeeper com código HTTP 403, sendo necessário o upgrade de plano
+            pelo aplicativo móvel.
+          </p>
+        </section>
+
+        <!-- Seção 4 -->
+        <section class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-indigo-400">4.</span> Disponibilidade do Serviço e Fatores Externos
+            (SLA)
+          </h2>
+          <p>
+            O PillGo empenha seus melhores esforços técnicos para manter a plataforma Gatekeeper e
+            os servidores MQTT em funcionamento ininterrupto. Todavia, a entrega oportuna de
+            notificações e comandos depende criticamente de fatores alheios ao controle da PillGo,
+            tais como:
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400 text-sm">
+            <li>Estabilidade e alcance da rede Wi-Fi residencial ou corporativa do usuário;</li>
+            <li>
+              Fornecimento regular de energia elétrica ou carga adequada de pilhas no dispenser;
+            </li>
+            <li>Serviços de conectividade de operadoras de telefonia e internet (ISPs);</li>
+            <li>
+              Sistemas operacionais móveis (iOS e Android) e suas políticas de economia de bateria
+              em segundo plano.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Seção 5 -->
+        <section class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-rose-400">5.</span> Exclusão de Conta e Direitos de Privacidade (LGPD)
+          </h2>
+          <p>
+            Em total harmonia com a Lei Geral de Proteção de Dados (Art. 18 da Lei nº 13.709/2018) e
+            com as diretrizes das lojas Google Play e Apple App Store, o usuário tem a faculdade de,
+            a qualquer momento e diretamente pelo aplicativo:
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400 text-sm">
+            <li>
+              <strong>Exportar seus dados:</strong> Baixar todos os registros cadastrais,
+              medicamentos, horários e telemetria através da rota portável
+              <code class="text-indigo-300">GET /api/account/export</code>;
+            </li>
+            <li>
+              <strong>Excluir definitivamente sua conta:</strong> Executar a exclusão imediata e
+              irreversível via <code class="text-rose-300">DELETE /api/account</code>, revogando
+              credenciais no broker MQTT, resetando vínculos e expurgando todo o histórico de dados
+              de saúde.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Seção 6 -->
+        <section class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-indigo-400">6.</span> Legislação Aplicável e Foro
+          </h2>
+          <p>
+            Estes Termos são regidos pelas leis vigentes na República Federativa do Brasil, em
+            especial o Marco Civil da Internet (Lei nº 12.965/2014), o Código de Defesa do
+            Consumidor (Lei nº 8.078/1990) e a LGPD (Lei nº 13.709/2018).
+          </p>
+          <p class="text-slate-400 text-sm">
+            Fica eleito o Foro da Comarca de São Paulo, Estado de São Paulo, para dirimir eventuais
+            litígios oriundos deste Contrato, renunciando as partes a qualquer outro, por mais
+            privilegiado que seja.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900 py-8 mt-16 text-xs text-slate-400">
+      <div
+        class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <div>© 2026 PillGo Tecnologia Ltda. Todos os direitos reservados.</div>
+        <div class="flex items-center gap-6">
+          <a href="index.html" class="hover:text-white transition">Início</a>
+          <a href="terms.html" class="hover:text-white transition text-teal-400 font-medium"
+            >Termos de Uso</a
+          >
+          <a href="privacy.html" class="hover:text-white transition"
+            >Política de Privacidade (LGPD)</a
+          >
+          <a href="mailto:suporte@pillgo.com.br" class="hover:text-white transition">Suporte</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
