@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PillGo — Política de Privacidade e Proteção de Dados de Saúde (LGPD)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eef2ff',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+              },
+              teal: {
+                400: '#2dd4bf',
+                500: '#14b8a6',
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-slate-950 text-slate-200 antialiased min-h-screen selection:bg-indigo-500 selection:text-white"
+  >
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div
+            class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-teal-400 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition"
+          >
+            P
+          </div>
+          <span class="font-bold text-xl tracking-tight text-white"
+            >Pill<span class="text-teal-400">Go</span></span
+          >
+          <span
+            class="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
+            >LGPD Compliance</span
+          >
+        </a>
+        <nav class="flex items-center gap-4 text-sm font-medium">
+          <a href="index.html" class="text-slate-400 hover:text-white transition flex items-center gap-1">
+            <span>&larr;</span> <span>Início</span>
+          </a>
+          <a href="terms.html" class="text-slate-400 hover:text-white transition">Termos de Uso</a>
+          <a
+            href="mailto:dpo@pillgo.com.br"
+            class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-teal-300 border border-slate-700 transition"
+          >
+            Falar com DPO
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Hero / Title -->
+      <div class="mb-10 text-center sm:text-left">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs font-semibold mb-4"
+        >
+          <span>Conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Política de Privacidade e Proteção de Dados de Saúde
+        </h1>
+        <p class="mt-3 text-slate-400 text-sm sm:text-base leading-relaxed">
+          Última atualização: 31 de outubro de 2026 • Versão 2.1 (Em vigor)
+        </p>
+        <p
+          class="mt-4 text-slate-300 leading-relaxed text-base bg-slate-900/60 p-4 rounded-xl border border-slate-800"
+        >
+          A <strong>PillGo Tecnologia</strong> assume o compromisso inegociável de proteger a sua
+          privacidade, intimidade e os dados pessoais sensíveis relativos à sua rotina de medicação
+          e saúde. Este documento detalha como seus dados são coletados, processados, armazenados
+          com criptografia de ponta a ponta e como você exerce pleno controle e titularidade sobre
+          eles.
+        </p>
+      </div>
+
+      <!-- Quick Navigation Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-12">
+        <a
+          href="#controlador-dpo"
+          class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition block"
+        >
+          <span class="text-indigo-400 font-bold block mb-1 text-sm">1. Controlador & DPO</span>
+          <span class="text-xs text-slate-400"
+            >Canal direto de contato e encarregado de dados.</span
+          >
+        </a>
+        <a
+          href="#minimizacao-iot"
+          class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-teal-500/50 transition block"
+        >
+          <span class="text-teal-400 font-bold block mb-1 text-sm">4. Borda IoT Segura</span>
+          <span class="text-xs text-slate-400"
+            >Minimização no ESP32: hardware não trafega nomes de remédios.</span
+          >
+        </a>
+        <a
+          href="#direitos-titular"
+          class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition block"
+        >
+          <span class="text-indigo-400 font-bold block mb-1 text-sm">7. Seus Direitos</span>
+          <span class="text-xs text-slate-400"
+            >Exportação portável (JSON) e exclusão imediata da conta.</span
+          >
+        </a>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Seção 1 -->
+        <section id="controlador-dpo" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm"
+            >
+              1
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">
+              Identificação do Controlador e Encarregado de Dados (DPO)
+            </h2>
+          </div>
+          <div
+            class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 text-slate-300 space-y-3 leading-relaxed"
+          >
+            <p>
+              O controlador responsável pelo tratamento de dados pessoais é a
+              <strong>PillGo Tecnologia Ltda.</strong>, desenvolvedora do ecossistema de dispenser
+              inteligente e aplicativos móveis.
+            </p>
+            <div class="mt-4 p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2 text-sm">
+              <p>
+                <strong class="text-white">Encarregado de Proteção de Dados (DPO):</strong> Equipe
+                de Segurança & Privacidade PillGo
+              </p>
+              <p>
+                <strong class="text-white">Canal Oficial do DPO:</strong>
+                <a href="mailto:dpo@pillgo.com.br" class="text-teal-400 hover:underline"
+                  >dpo@pillgo.com.br</a
+                >
+              </p>
+              <p>
+                <strong class="text-white">Central de Dúvidas sobre Privacidade:</strong>
+                <a href="mailto:privacidade@pillgo.com.br" class="text-teal-400 hover:underline"
+                  >privacidade@pillgo.com.br</a
+                >
+              </p>
+            </div>
+            <p class="text-sm text-slate-400">
+              Você pode entrar em contato a qualquer momento para esclarecer dúvidas, solicitar
+              esclarecimentos técnicos ou exercer qualquer um dos seus direitos previstos no Artigo
+              18 da LGPD.
+            </p>
+          </div>
+        </section>
+
+        <!-- Seção 2 -->
+        <section id="dados-tratados" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm"
+            >
+              2
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">
+              Dados Pessoais e Dados Pessoais Sensíveis Tratados
+            </h2>
+          </div>
+          <div
+            class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 text-slate-300 space-y-4 leading-relaxed"
+          >
+            <p>
+              Em decorrência do funcionamento do dispenser físico e do aplicativo de gerenciamento
+              de saúde, o PillGo realiza o tratamento das seguintes categorias de dados:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mt-2">
+              <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+                <h3 class="text-white font-semibold flex items-center gap-2 mb-2">
+                  <span class="w-2 h-2 rounded-full bg-indigo-400"></span> Dados Cadastrais e
+                  Técnicos
+                </h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-400">
+                  <li>Endereço de e-mail do usuário</li>
+                  <li>Identificador único de autenticação (UUID Supabase Auth)</li>
+                  <li>Identificador de hardware (Endereço MAC do ESP32)</li>
+                  <li>Histórico de transações de assinatura (Plano contratado)</li>
+                  <li>Tokens efêmeros de ativação e pareamento (6 dígitos com expiração)</li>
+                </ul>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-950 border border-rose-500/20 bg-rose-500/[0.02]">
+                <h3 class="text-rose-300 font-semibold flex items-center gap-2 mb-2">
+                  <span class="w-2 h-2 rounded-full bg-rose-400"></span> Dados Sensíveis de Saúde
+                  (Art. 5º, II LGPD)
+                </h3>
+                <ul class="list-disc list-inside space-y-1 text-slate-300">
+                  <li>Nomes de medicamentos vinculados a cada tampa física</li>
+                  <li>Horários de alarmes programados e dosagens</li>
+                  <li>Janela de tolerância para tomada de doses</li>
+                  <li>Histórico temporal de abertura e fechamento das tampas do dispenser</li>
+                  <li>Registro de adesão e notificações de atraso na medicação</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section id="finalidade-bases-legais" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm"
+            >
+              3
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">
+              Finalidade Estrita e Bases Legais
+            </h2>
+          </div>
+          <div
+            class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 text-slate-300 space-y-4 leading-relaxed"
+          >
+            <p>
+              O tratamento de dados é restrito à finalidade indispensável de prestar o serviço de
+              dispenser inteligente, auxiliando o paciente ou seus cuidadores a manter a
+              regularidade na administração de seus remédios.
+            </p>
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
+                <strong class="text-teal-400"
+                  >1. Consentimento Expresso do Titular (Art. 7º, I e Art. 11, I da LGPD):</strong
+                >
+                <p class="text-slate-400 mt-1">
+                  Fornecido no momento da criação de conta e pareamento do dispenser, autorizando a
+                  sincronização segura dos horários e medicamentos.
+                </p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
+                <strong class="text-teal-400"
+                  >2. Tutela da Saúde (Art. 11, II, alínea "f" da LGPD):</strong
+                >
+                <p class="text-slate-400 mt-1">
+                  O tratamento destina-se estritamente a garantir o suporte à adesão medicamentosa e
+                  segurança do próprio titular.
+                </p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
+                <strong class="text-teal-400">3. Execução de Contrato (Art. 7º, V da LGPD):</strong>
+                <p class="text-slate-400 mt-1">
+                  Processamento necessário para o funcionamento operacional do hardware, acionamento
+                  de LEDs sinalizadores e envio de comandos criptografados.
+                </p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-400 italic">
+              * Em hipótese alguma o PillGo comercializa, licencia ou compartilha dados pessoais ou
+              de saúde com seguradoras, operadoras de planos de saúde, laboratórios ou
+              intermediários de publicidade direcionada.
+            </p>
+          </div>
+        </section>
+
+        <!-- Seção 4 -->
+        <section id="minimizacao-iot" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-sm"
+            >
+              4
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">
+              Minimização na Borda IoT (Privacy by Design no ESP32)
+            </h2>
+          </div>
+          <div
+            class="bg-gradient-to-br from-slate-900 to-slate-900/40 border border-teal-500/30 rounded-2xl p-6 text-slate-300 space-y-4 leading-relaxed"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex-shrink-0 flex items-center justify-center"
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">
+                  Arquitetura de Zero Dados Clínicos no Microcontrolador
+                </h3>
+                <p class="text-sm text-slate-300 mt-1">
+                  Para blindar seus dados contra qualquer acesso físico no equipamento ou
+                  interceptação local na rede Wi-Fi residencial, implementamos o conceito de
+                  <em>Privacy by Design</em> e minimização na borda IoT:
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-sm space-y-2">
+              <p class="flex items-center gap-2">
+                <span class="text-teal-400 font-bold">✓ Sem Nomes de Remédios no Firmware:</span> O
+                microcontrolador ESP32 do PillGo <strong>NUNCA</strong> armazena, processa ou recebe
+                nomes de remédios, patologias ou identidades pessoais de pacientes.
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-teal-400 font-bold">✓ Telemetria Eletromecânica Abstrata:</span> O
+                hardware apenas detecta sensores de contato e publica mensagens como
+                <code class="text-indigo-300">{"sensor": "Tampa 3", "status": "ABERTA"}</code>.
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-teal-400 font-bold">✓ Criptografia Forte no Transporte:</span> A
+                comunicação do dispenser com o broker Mosquitto ocorre via protocolo MQTTS com
+                criptografia TLS 1.3 na porta 8883, impedindo leitura ou adulteração em trânsito.
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-teal-400 font-bold">✓ Correlação Exclusiva em Nuvem e App:</span>
+                O vínculo entre o compartimento físico ("Tampa 3") e o medicamento do tratamento
+                clínico é mantido exclusivamente no banco em nuvem isolado por RLS e no app móvel
+                autenticado do titular.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 5 -->
+        <section id="armazenamento-seguranca" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm"
+            >
+              5
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">
+              Armazenamento e Transferência Internacional Segura
+            </h2>
+          </div>
+          <div
+            class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 text-slate-300 space-y-3 leading-relaxed"
+          >
+            <p>
+              Nossa infraestrutura tecnológica está hospedada em data centers de classe mundial, com
+              redundância e certificações internacionais de segurança da informação (ISO 27001, SOC
+              2 Tipo II):
+            </p>
+            <ul class="list-disc list-inside space-y-1.5 text-sm text-slate-400">
+              <li>
+                <strong class="text-slate-200">Oracle Cloud Infrastructure (OCI):</strong>
+                Servidores de orquestração do Gatekeeper PillGo, com firewall restritivo, conexões
+                SSH blindadas por chave RSA e broker MQTT isolado.
+              </li>
+              <li>
+                <strong class="text-slate-200">Supabase (PostgreSQL Gerenciado):</strong> Banco de
+                dados relacional com criptografia de dados em repouso (AES-256) e políticas estritas
+                de <em>Row-Level Security (RLS)</em> onde usuários só conseguem ler dados de suas
+                próprias contas.
+              </li>
+              <li>
+                <strong class="text-slate-200"
+                  >Transferência Internacional de Dados (Art. 33 LGPD):</strong
+                >
+                Realizada unicamente com provedores que oferecem garantias de conformidade
+                equiparáveis aos padrões estabelecidos pela legislação brasileira.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Seção 6 -->
+        <section id="retencao-descarte" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm"
+            >
+              6
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">
+              Retenção e Descarte Seguro dos Dados
+            </h2>
+          </div>
+          <div
+            class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 text-slate-300 space-y-3 leading-relaxed"
+          >
+            <p>
+              Os dados pessoais e de histórico de medicação são mantidos apenas durante a vigência
+              da relação contratual e da utilização ativa do serviço.
+            </p>
+            <p class="text-sm text-slate-400">
+              Contas de usuários do plano Bronze inativas por mais de 30 dias após expiração são
+              submetidas a processos periódicos de garbage collection e limpeza automática. Além
+              disso, a qualquer momento o próprio usuário pode requerer o expurgo completo imediato.
+            </p>
+          </div>
+        </section>
+
+        <!-- Seção 7 -->
+        <section id="direitos-titular" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-sm"
+            >
+              7
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">
+              Direitos do Titular de Dados (Artigo 18 da LGPD)
+            </h2>
+          </div>
+          <div
+            class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 text-slate-300 space-y-4 leading-relaxed"
+          >
+            <p>
+              Você possui direitos plenos garantidos pela Lei Geral de Proteção de Dados, os quais
+              podem ser exercidos diretamente pelas configurações do aplicativo ou por nossos
+              canais:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+                <strong class="text-white block mb-1"
+                  >📦 Portabilidade e Exportação (Art. 18, V)</strong
+                >
+                <p class="text-slate-400 mb-2">
+                  Exporte instantaneamente todos os seus dados cadastrais, medicamentos, horários e
+                  histórico de telemetria em formato JSON estruturado.
+                </p>
+                <span
+                  class="inline-block px-2.5 py-1 rounded bg-slate-800 text-indigo-300 text-xs font-mono"
+                  >GET /api/account/export</span
+                >
+              </div>
+              <div class="p-4 rounded-xl bg-slate-950 border border-rose-500/20">
+                <strong class="text-rose-400 block mb-1"
+                  >🗑️ Exclusão Definitiva da Conta (Art. 18, VI)</strong
+                >
+                <p class="text-slate-400 mb-2">
+                  Exclusão permanente de sua conta, desautorização do hardware físico, revogação de
+                  senhas MQTT no broker e expurgo de todos os dados de saúde.
+                </p>
+                <span
+                  class="inline-block px-2.5 py-1 rounded bg-rose-500/10 text-rose-300 text-xs font-mono"
+                  >DELETE /api/account</span
+                >
+              </div>
+              <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+                <strong class="text-white block mb-1"
+                  >🔍 Acesso e Confirmação (Art. 18, I e II)</strong
+                >
+                <p class="text-slate-400">
+                  Consulte detalhadamente quais dados estão registrados sobre seu dispenser e rotina
+                  através da tela do aplicativo.
+                </p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+                <strong class="text-white block mb-1"
+                  >✏️ Retificação e Correção (Art. 18, III)</strong
+                >
+                <p class="text-slate-400">
+                  Edite nomes de remédios, alarmes, tolerâncias e dados cadastrais a qualquer
+                  momento em tempo real.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 8 -->
+        <section id="contato-dpo" class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm"
+            >
+              8
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">
+              Canal de Atendimento e Comunicação
+            </h2>
+          </div>
+          <div
+            class="bg-gradient-to-r from-indigo-950/40 via-slate-900 to-teal-950/30 border border-indigo-500/30 rounded-2xl p-6 text-slate-300 space-y-4 leading-relaxed"
+          >
+            <p>
+              Para exercer seus direitos de titular, solicitar esclarecimentos técnicos ou registrar
+              manifestações junto ao nosso Encarregado de Proteção de Dados (DPO), envie mensagem
+              para:
+            </p>
+            <div class="flex flex-wrap items-center gap-3">
+              <a
+                href="mailto:dpo@pillgo.com.br"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-indigo-600/30"
+              >
+                ✉️ dpo@pillgo.com.br
+              </a>
+              <a
+                href="mailto:privacidade@pillgo.com.br"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-teal-300 font-semibold text-sm border border-slate-700 transition"
+              >
+                ✉️ privacidade@pillgo.com.br
+              </a>
+            </div>
+            <p class="text-xs text-slate-400">
+              Garantimos resposta às solicitações de titulares no prazo máximo de 15 (quinze) dias
+              úteis, conforme estipulado pela legislação e pelas diretrizes da Autoridade Nacional
+              de Proteção de Dados (ANPD).
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900 py-8 mt-16 text-xs text-slate-400">
+      <div
+        class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <div>© 2026 PillGo Tecnologia Ltda. Todos os direitos reservados.</div>
+        <div class="flex items-center gap-6">
+          <a href="index.html" class="hover:text-white transition">Início</a>
+          <a href="terms.html" class="hover:text-white transition">Termos de Uso</a>
+          <a href="privacy.html" class="hover:text-white transition text-teal-400 font-medium"
+            >Política de Privacidade</a
+          >
+          <a href="mailto:privacidade@pillgo.com.br" class="hover:text-white transition">DPO</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
